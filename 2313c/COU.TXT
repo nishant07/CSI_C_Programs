@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+struct cap
+{
+		char co[15],ca[15];
+}s[5];
+void main()
+{
+		int i,f=0,j;
+		 char c[15];
+		FILE *f1;
+      clrscr();
+      f1=fopen("Capi.txt","r");
+      if (f1==NULL)
+      {    printf("\nFile not found");
+	   exit(0);
+      }
+      for(i=0;feof(f1)==0;i++)
+      {
+		fscanf(f1,"%s %s",s[i].co,s[i].ca);
+      }
+      while(1)
+      {
+	printf("\nEnter country:");
+	 scanf("%s",c);
+	 if(strcmpi(c,"END")==0)
+		break;
+		{
+		for(j=0;j<i;j++)
+			{
+			f=0;
+			if(strcmpi(c,s[j].co)==0)
+				{
+				printf("\nCapital of %s country is :%s",s[j].co,s[j].ca);
+			   f=1;
+			   break;
+				     }
+
+			}
+		 if(f==0)
+		     {
+				printf("don't know  the capital of this contry\n");
+			   break;
+		     }
+	    }
+      }
+      fclose(f1);
+      getch();
+}
+

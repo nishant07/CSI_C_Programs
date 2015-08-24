@@ -1,0 +1,9 @@
+#include<stdio.h>
+#incude<conio.h>
+void main()
+{
+	char *a;
+	printf("Enter the Production");
+	scanf("%s",a);
+	printf("%s",a);
+}

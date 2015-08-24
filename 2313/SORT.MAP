@@ -1,0 +1,350 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 02E72H 02E73H _TEXT              CODE
+ 02E80H 02E80H 00000H _FARDATA           FAR_DATA
+ 02E80H 02E80H 00000H _FARBSS            FAR_BSS
+ 02E80H 02E80H 00000H _OVERLAY_          OVRINFO
+ 02E80H 02E80H 00000H _1STUB_            STUBSEG
+ 02E80H 033ADH 0052EH _DATA              DATA
+ 033AEH 033AFH 00002H _CVTSEG            DATA
+ 033B0H 033B5H 00006H _SCNSEG            DATA
+ 033B6H 033B6H 00000H _CONST             CONST
+ 033B6H 033C7H 00012H _INIT_             INITDATA
+ 033C8H 033C8H 00000H _INITEND_          INITDATA
+ 033C8H 033C8H 00000H _EXIT_             EXITDATA
+ 033C8H 033C8H 00000H _EXITEND_          EXITDATA
+ 033C8H 03509H 00142H _BSS               BSS
+ 0350AH 0350AH 00000H _BSSEND            BSSEND
+ 03510H 0358FH 00080H _STACK             STACK
+
+  Address         Publics by Name
+
+ 02E8:0000       DATASEG@
+ 0000:028D       DGROUP@
+ 02E8:0548       _a
+ 0000:0278       _abort
+ 0000:03AD       _atexit
+ 0000:133F       _brk
+ 0000:1F79       _close
+ 0000:135B       _clrscr
+ 0000:14B7       _cprintf
+ 02E8:04D7       _directvideo
+ 0000:1FBD       _eof
+ 02E8:0094       _errno
+ 0000:0457       _exit
+ 0000:2034       _fclose
+ 0000:20A9       _fflush
+ 0000:24A8       _fgetc
+ 0000:2553       _fgetchar
+ 0000:2126       _flushall
+ 0000:22D1       _fopen
+ 0000:276D       _fputc
+ 0000:2892       _fputchar
+ 0000:185C       _free
+ 0000:22F0       _fscanf
+ 0000:236A       _fseek
+ 0000:23CE       _ftell
+ 0000:169F       _getch
+ 0000:16B8       _getche
+ 0000:16F1       _gettext
+ 0000:1786       _ioctl
+ 0000:04DD       _isatty
+ 0000:17AD       _kbhit
+ 0000:0588       _lseek
+ 0000:0291       _main
+ 0000:192B       _malloc
+ 0000:255C       _memcpy
+ 0000:17BF       _movetext
+ 0000:25A6       _open
+ 0000:273F       _printf
+ 0000:1AD3       _putch
+ 0000:1745       _puttext
+ 0000:1A82       _realloc
+ 0000:134B       _sbrk
+ 0000:2AFC       _scanf
+ 0000:2B1A       _setvbuf
+ 0000:2BE4       _strcat
+ 0000:2C1D       _strcmp
+ 0000:2C4C       _stricmp
+ 0000:2C8C       _strlen
+ 0000:0D36       _tell
+ 0000:2CA6       _ungetc
+ 0000:16D5       _ungetch
+ 0000:0D4C       _unlink
+ 0000:1F3C       _wherex
+ 0000:1F4B       _wherey
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 02E8:051A       __argc
+ 02E8:051C       __argv
+ 02E8:00FC       __atexitcnt
+ 02E8:0638       __atexittbl
+ 02E8:00A2       __brklvl
+ 02E8:0084       __C0argc
+ 02E8:0086       __C0argv
+ 0000:1589       __c0crtinit
+ 02E8:0088       __C0environ
+ 02E8:0513       __cChar
+ 0000:0478       __cexit
+ 02E8:0512       __cFlag
+ 0000:016F       __checknull
+ 0000:1F5E       __chmod
+ 0000:015C       __cleanup
+ 0000:1F9F       __close
+ 0000:1384       __CPUTN
+ 0000:15A6       __crtinit
+ 02E8:00FE       __ctype
+ 0000:0000  Abs  __cvtfak
+ 0000:0486       __c_exit
+ 02E8:0376       __doserrno
+ 0000:04CB       __DOSERROR
+ 02E8:0378       __dosErrorToSV
+ 0000:03D1       __dos_getfileattr
+ 0000:03EE       __dos_setfileattr
+ 02E8:008A       __envLng
+ 02E8:008C       __envseg
+ 02E8:008E       __envSize
+ 0000:0466       __exit
+ 02E8:0200       __exitbuf
+ 02E8:0202       __exitfopen
+ 02E8:0204       __exitopen
+ 0000:2497       __fgetc
+ 02E8:0514       __first
+ 02E8:0370       __fmode
+ 0000:2756       __fputc
+ 0000:28A3       __FPUTN
+ 0000:22A6       __GETFP
+ 02E8:009E       __heapbase
+ 02E8:0374       __heaplen
+ 02E8:00A6       __heaptop
+ 02E8:0074       __Int0Vector
+ 02E8:0078       __Int4Vector
+ 02E8:007C       __Int5Vector
+ 02E8:0080       __Int6Vector
+ 0000:0492       __IOERROR
+ 02E8:0516       __last
+ 0000:04EE       __LONGTOA
+ 0000:05B1       __MKNAME
+ 0000:028F       __MMODEL
+ 0000:24A8       __Nfgetc
+ 02E8:0346       __nfile
+ 0000:16B8       __Ngetche
+ 02E8:0372       __notUmask
+ 0000:2CA6       __Nungetc
+ 0000:16D5       __Nungetch
+ 0000:26F2       __open
+ 02E8:0348       __openfd
+ 0000:2212       __OPENFP
+ 02E8:0092       __osmajor
+ 02E8:0093       __osminor
+ 02E8:0092       __osversion
+ 02E8:0090       __psp
+ 0000:062D       __read
+ 0000:1AE6       __REALCVT
+ 02E8:052E       __RealCvtVector
+ 0000:01EC       __restorezero
+ 02E8:0518       __rover
+ 0000:065A       __scanner
+ 0000:1AF2       __scanpop
+ 0000:1AEE       __scanrslt
+ 0000:1AEA       __scantod
+ 02E8:0530       __ScanTodVector
+ 0000:0B1A       __scantol
+ 0000:1C22       __SCREENIO
+ 0000:1CC3       __SCROLL
+ 0000:0000  Abs  __setargv__
+ 0000:0C99       __setupio
+ 02E8:0096       __StartTime
+ 02E8:045C       __stklen
+ 0000:12C7       __stpcpy
+ 02E8:0206       __streams
+ 0000:0197       __terminate
+ 0000:05EC       __TMPNAM
+ 0000:0000  Abs  __turboCrt
+ 0000:056B       __UTOA
+ 0000:1C5E       __VALIDATEXY
+ 02E8:0092       __version
+ 02E8:04C8       __video
+ 0000:1505       __VideoInt
+ 0000:0D7A       __VPRINTER
+ 0000:1228       __VPTR
+ 0000:124D       __VRAM
+ 0000:1F32       __wherexy
+ 0000:2DF2       __write
+ 02E8:04C6       __wscroll
+ 0000:2E2C       __xfclose
+ 0000:2E52       __xfflush
+ 0000:12EC       ___brk
+ 02E8:009C       ___brklvl
+ 02E8:009A       ___heapbase
+ 0000:2A34       ___read
+ 0000:130E       ___sbrk
+ 0000:2CEE       ___write
+
+  Address         Publics by Value
+
+ 0000:0000  Abs  __setargv__
+ 0000:0000  Abs  __turboCrt
+ 0000:0000  Abs  __cvtfak
+ 0000:000C  Abs  __AHSHIFT
+ 0000:1000  Abs  __AHINCR
+ 0000:015C       __cleanup
+ 0000:016F       __checknull
+ 0000:0197       __terminate
+ 0000:01EC       __restorezero
+ 0000:0278       _abort
+ 0000:028D       DGROUP@
+ 0000:028F       __MMODEL
+ 0000:0291       _main
+ 0000:03AD       _atexit
+ 0000:03D1       __dos_getfileattr
+ 0000:03EE       __dos_setfileattr
+ 0000:0457       _exit
+ 0000:0466       __exit
+ 0000:0478       __cexit
+ 0000:0486       __c_exit
+ 0000:0492       __IOERROR
+ 0000:04CB       __DOSERROR
+ 0000:04DD       _isatty
+ 0000:04EE       __LONGTOA
+ 0000:056B       __UTOA
+ 0000:0588       _lseek
+ 0000:05B1       __MKNAME
+ 0000:05EC       __TMPNAM
+ 0000:062D       __read
+ 0000:065A       __scanner
+ 0000:0B1A       __scantol
+ 0000:0C99       __setupio
+ 0000:0D36       _tell
+ 0000:0D4C       _unlink
+ 0000:0D7A       __VPRINTER
+ 0000:1228       __VPTR
+ 0000:124D       __VRAM
+ 0000:12C7       __stpcpy
+ 0000:12EC       ___brk
+ 0000:130E       ___sbrk
+ 0000:133F       _brk
+ 0000:134B       _sbrk
+ 0000:135B       _clrscr
+ 0000:1384       __CPUTN
+ 0000:14B7       _cprintf
+ 0000:1505       __VideoInt
+ 0000:1589       __c0crtinit
+ 0000:15A6       __crtinit
+ 0000:169F       _getch
+ 0000:16B8       __Ngetche
+ 0000:16B8       _getche
+ 0000:16D5       __Nungetch
+ 0000:16D5       _ungetch
+ 0000:16F1       _gettext
+ 0000:1745       _puttext
+ 0000:1786       _ioctl
+ 0000:17AD       _kbhit
+ 0000:17BF       _movetext
+ 0000:185C       _free
+ 0000:192B       _malloc
+ 0000:1A82       _realloc
+ 0000:1AD3       _putch
+ 0000:1AE6       __REALCVT
+ 0000:1AEA       __scantod
+ 0000:1AEE       __scanrslt
+ 0000:1AF2       __scanpop
+ 0000:1C22       __SCREENIO
+ 0000:1C5E       __VALIDATEXY
+ 0000:1CC3       __SCROLL
+ 0000:1F32       __wherexy
+ 0000:1F3C       _wherex
+ 0000:1F4B       _wherey
+ 0000:1F5E       __chmod
+ 0000:1F79       _close
+ 0000:1F9F       __close
+ 0000:1FBD       _eof
+ 0000:2034       _fclose
+ 0000:20A9       _fflush
+ 0000:2126       _flushall
+ 0000:2212       __OPENFP
+ 0000:22A6       __GETFP
+ 0000:22D1       _fopen
+ 0000:22F0       _fscanf
+ 0000:236A       _fseek
+ 0000:23CE       _ftell
+ 0000:2497       __fgetc
+ 0000:24A8       __Nfgetc
+ 0000:24A8       _fgetc
+ 0000:2553       _fgetchar
+ 0000:255C       _memcpy
+ 0000:25A6       _open
+ 0000:26F2       __open
+ 0000:273F       _printf
+ 0000:2756       __fputc
+ 0000:276D       _fputc
+ 0000:2892       _fputchar
+ 0000:28A3       __FPUTN
+ 0000:2A34       ___read
+ 0000:2AFC       _scanf
+ 0000:2B1A       _setvbuf
+ 0000:2BE4       _strcat
+ 0000:2C1D       _strcmp
+ 0000:2C4C       _stricmp
+ 0000:2C8C       _strlen
+ 0000:2CA6       __Nungetc
+ 0000:2CA6       _ungetc
+ 0000:2CEE       ___write
+ 0000:2DF2       __write
+ 0000:2E2C       __xfclose
+ 0000:2E52       __xfflush
+ 02E8:0000       DATASEG@
+ 02E8:0074       __Int0Vector
+ 02E8:0078       __Int4Vector
+ 02E8:007C       __Int5Vector
+ 02E8:0080       __Int6Vector
+ 02E8:0084       __C0argc
+ 02E8:0086       __C0argv
+ 02E8:0088       __C0environ
+ 02E8:008A       __envLng
+ 02E8:008C       __envseg
+ 02E8:008E       __envSize
+ 02E8:0090       __psp
+ 02E8:0092       __osversion
+ 02E8:0092       __osmajor
+ 02E8:0092       __version
+ 02E8:0093       __osminor
+ 02E8:0094       _errno
+ 02E8:0096       __StartTime
+ 02E8:009A       ___heapbase
+ 02E8:009C       ___brklvl
+ 02E8:009E       __heapbase
+ 02E8:00A2       __brklvl
+ 02E8:00A6       __heaptop
+ 02E8:00FC       __atexitcnt
+ 02E8:00FE       __ctype
+ 02E8:0200       __exitbuf
+ 02E8:0202       __exitfopen
+ 02E8:0204       __exitopen
+ 02E8:0206       __streams
+ 02E8:0346       __nfile
+ 02E8:0348       __openfd
+ 02E8:0370       __fmode
+ 02E8:0372       __notUmask
+ 02E8:0374       __heaplen
+ 02E8:0376       __doserrno
+ 02E8:0378       __dosErrorToSV
+ 02E8:045C       __stklen
+ 02E8:04C6       __wscroll
+ 02E8:04C8       __video
+ 02E8:04D7       _directvideo
+ 02E8:0512       __cFlag
+ 02E8:0513       __cChar
+ 02E8:0514       __first
+ 02E8:0516       __last
+ 02E8:0518       __rover
+ 02E8:051A       __argc
+ 02E8:051C       __argv
+ 02E8:052E       __RealCvtVector
+ 02E8:0530       __ScanTodVector
+ 02E8:0548       _a
+ 02E8:0638       __atexittbl
+
+Program entry point at 0000:0000
+

@@ -1,0 +1,173 @@
+<html>
+<head>
+   <title>C Tutorial - Chapter 1</title>
+   <meta name="Author" content="Gordon Dodrill">
+   <meta name="GENERATOR" content="Mozilla/2.01Gold (Win32)">
+</head>
+<body bgcolor="#FFFFFF">
+<b>C Tutorial - Chapter 1</b> 
+<p><b><font SIZE=+3>G</font><font SIZE=+2>ETTING</font><font SIZE=+3> S</font><font SIZE=+2>TARTED
+</font></b></p>
+
+<p><b>WHAT IS AN IDENTIFIER?</b></p>
+
+<p>Before you can do anything in any language, you must know how to name
+an identifier. An identifier is used for any variable, function, data definition,
+etc. In the C programming language, an identifier is a combination of alphanumeric
+characters, the first being a letter of the alphabet or an underline, and
+the remaining being any letter of the alphabet, any numeric digit, or the
+underline. </p>
+
+<p>Two rules must be kept in mind when naming identifiers. </p>
+
+<ol>
+<li>The case of alphabetic characters is significant. Using <b>INDEX </b>for
+a variable name is not the same as using <b>index</b> and neither of them
+is the same as using <b>InDeX</b> for a variable name. All three refer
+to different variables. </li>
+
+<li>According to the ANSI-C standard, at least 31 significant characters
+can be used and will be considered significant by a conforming ANSI-C compiler.
+If more than 31 are used, all characters beyond the 31st may be ignored
+by any given compiler. </li>
+</ol>
+
+<p><b>WHAT ABOUT THE UNDERLINE? </b></p>
+
+<p>The underline can be used as part of a variable name, and adds greatly
+to the readability of the resulting code. It is used by some, but not all,
+experienced C programmers. A few underlines are used for illustration in
+this tutorial. Since most compiler writers use the underline as the first
+character for variable names internal to the system, you should refrain
+from using the underline to begin an identifier to avoid the possibility
+of a name clash. To get specific, identifiers with two leading underscores
+are reserved for the compiler as well as identifiers beginning with a single
+underscore and using an upper case alphabetic character for the second.
+If you make it a point of style to never use an identifier with a leading
+underline, you will not have a naming clash with the system. </p>
+
+<p>It adds greatly to the readability of a program to use descriptive names
+for variables and it would be to your advantage to do so. Pascal and Ada
+programmers tend to use long descriptive names, but most C programmers
+tend to use short cryptic names. Most of the example programs in this tutorial
+use very short names for that reason, but a few longer names are used for
+illustrative purposes. </p>
+
+<p><b>KEYWORDS </b></p>
+
+<p>There are 32 words defined as keywords in C. These have predefined uses
+and cannot be used for any other purpose in a C program. They are used
+by the compiler as an aid to compiling the program. They are always written
+in lower case. A complete list follows; </p>
+
+<pre><b>     auto       double     int        struct
+     break      else       long       switch
+     case       enum       register   typedef
+     char       extern     return     union
+     const      float      short      unsigned
+     continue   for        signed     void
+     default    goto       sizeof     volatile
+     do         if         static     while </b>
+</pre>
+
+<p>In addition to this list of keywords, your compiler may define a few
+more. If it does, they will be listed in the documentation that came with
+your compiler. Each of the above keywords will be defined, illustrated,
+and used in this tutorial. </p>
+
+<p><b>WE NEED DATA AND A PROGRAM </b></p>
+
+<p>Any computer program has two entities to consider, the data, and the
+program. They are highly dependent on one another and careful planning
+of both will lead to a well planned and well written program. Unfortunately,
+it is not possible to study either completely without a good working knowledge
+of the other. For that reason, this tutorial will jump back and forth between
+teaching methods of program writing and methods of data definition. Simply
+follow along and you will have a good understanding of both. Keep in mind
+that, even though it seems expedient to sometimes jump right into coding
+the program, time spent planning the data structures will be well spent
+and the quality of the final program will reflect the original planning.
+</p>
+
+<p><b>HOW THIS TUTORIAL IS WRITTEN </b></p>
+
+<p>As you go through the example programs, you will find that every program
+is complete. There are no program fragments that could be confusing. This
+allows you to see every requirement that is needed to use any of the features
+of C as they are presented. Some tutorials I have seen give very few, and
+very complex examples. They really serve more to confuse the student. This
+tutorial is the complete opposite because it strives to cover each new
+aspect of programming in as simple a context as possible.</p>
+
+<p>Throughout this tutorial, <b>keywords, variable names,</b> and <b>function
+names</b> will be given in boldface as an aid to clarity. These terms will
+be completely defined throughout the tutorial. </p>
+
+<p><b>RESULT OF EXECUTION </b></p>
+
+<p>The result of executing each program will be given in comments at the
+end of the program listing after the comment is defined in about the fourth
+program of chapter 2. If you feel confident that you completely understand
+the program, you can simply refer to the result of execution to see if
+you understand the result. In this case, it will not be necessary for you
+to compile and execute every program. It would be a good exercise for you
+to compile and execute some of them however, because all C compilers will
+not generate exactly the same results and you need to get familiar with
+your own compiler. </p>
+
+<p>Example program ------&gt; <b>FIRSTEX.C</b> </p>
+
+<p>At this point, you should compile and execute FIRSTEX.C if you have
+not yet done so, to see that your C compiler is properly loaded and operating.
+Don't worry about what the program does yet. In due time you will understand
+it completely. </p>
+
+<p>Note that this program will compile and execute properly with any good
+compiler. </p>
+
+<p><b>A WORD ABOUT COMPILERS </b></p>
+
+<p>All of the example programs in this tutorial will compile and execute
+correctly with any good ANSI compatible C compiler. Some compilers have
+gotten extremely complex and hard to use for a beginning C programmer,
+and some only compile and build Microsoft Windows programs. Fortunately,
+most of the C compilers available have a means of compiling a standard
+C program which is written for the DOS environment and includes none of
+the Windows extensions. You should check your documentation for the capabilities
+and limitations of your compiler. If you have not yet purchased a C compiler,
+you should find one that is ANSI-C compliant, and that also has the ability
+to generate a DOS executable if you are planning to use the DOS operating
+system. </p>
+
+<p><b>ANSWERS TO&nbsp;PROGRAMMING&nbsp;EXERCISES </b></p>
+
+<p>There are programming exercises at the end of most of the chapters. You should 
+  attempt to do original work on each of the exercises before referring to the 
+  answers (all of which are located in the /ans directory) in order to gain your 
+  own programming experience. These answers are given for your information in 
+  case you are completely stuck on how to solve a particular problem. These answers 
+  are not meant to be the only answer, since there are many ways to program anything, 
+  but they are meant to illustrate one way to solve the suggested programming 
+  problem. </p>
+
+<p>The answers are all in source files named in the format CHnn_m.C where
+nn is the chapter number, and m is the exercise number. If more than one
+answer is required, an A, B, or C is included following the exercise number.</p>
+
+<p><a href="clist.htm">Return to Table of Contents</a></p>
+
+<p><a href="chap02.htm">Advance to Chapter 2</a></p>
+
+<p>
+<hr width="100%" >
+<font size=-1><i>Copyright &copy; 1988-2001 Coronado Enterprises, a division of 
+WebStrata IS - Last update, March 31, 2001 <br>
+Gordon Dodrill - author - </i><a href="http://www.coronadoenterprises.com/coders/index.html">Please 
+post any comments, suggestions or code snippets to our Code Board</a>.</font> 
+<br>
+<p></p>
+
+<br><p></p>
+
+</body>
+</html>

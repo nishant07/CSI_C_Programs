@@ -1,0 +1,90 @@
+#include<stdio.h>
+#include<conio.h>
+int n[25],k,l,i,j,t,q,c[25],s[25];
+void dshift(int z)
+{
+	for(t=l-2;t>z;t--)
+		n[t+1]=n[t];
+}
+int noblank(int n[])
+{
+	for(j=0,k=0;j<l;j++,k++)
+	{
+		     i=j;
+		     c[k]=1;
+		      while(n[i]+1==n[i+1])
+			 {
+				c[k]++;
+				i++;
+			  }
+	}
+	for(j=0;j<l;j++)
+	{
+		for(i=j+1;i<l;i++)
+		{
+			if(c[j]<c[i])
+			{
+				t=c[i];
+				c[i]=c[j];
+				c[j]=t;
+			}
+		}
+	}
+	return(c[0]);
+}
+void main()
+{
+	int z;
+	clrscr();
+	printf("\nEnter limit:");
+	scanf("%d",&l);
+	for(j=0;j<l;j++)
+	{
+		printf("Enter no.:");
+		scanf("%d",&n[j]);
+	}
+	for(i=0;i<l;i++)
+	{
+		for(j=i+1;j<l;j++)
+		{
+			if(n[i]>n[j])
+			{
+				t=n[i];
+				n[i]=n[j];
+				n[j]=t;
+			}
+		}
+	}
+	if(n[0]==0)
+	{
+		for(i=0;i<l;i++)
+			n[i]=n[i+1];
+
+		for(z=0,q=0;z<l-1;z++,q++)
+		{
+			while(n[z+1]==n[z]+1)
+				z++;
+			dshift(z);
+			n[z+1]=n[z]+1;
+			s[q]=noblank(n);
+			for(t=z+1;t<=l;t++)
+				n[t]=n[t+1];
+		}
+		for(i=0;i<l;i++)
+		{
+			for(j=i+1;j<l;j++)
+			{
+				if(s[i]<s[j])
+				{
+					t=s[i];
+					s[i]=s[j];
+					s[j]=t;
+				}
+			}
+		}
+	 }
+	 else
+		s[0]=noblank(n);
+	printf("%d",s[0]);
+	getch();
+}

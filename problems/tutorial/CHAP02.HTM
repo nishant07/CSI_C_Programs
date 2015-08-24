@@ -1,0 +1,327 @@
+<html>
+<head>
+   <title>C Tutorial - Chapter 2</title>
+   <meta name="Author" content="Gordon Dodrill">
+   <meta name="GENERATOR" content="Mozilla/2.01Gold (Win32)">
+</head>
+<body bgcolor="#FFFFFF">
+<b>C Tutorial - Chapter 2 </b>
+<p><b><font SIZE=+3>P</font><font SIZE=+2>ROGRAM </font><font SIZE=+3>S</font><font SIZE=+2>TRUCTURE</font><font SIZE=+2> 
+  </font></b></p>
+
+<p><b>YOUR FIRST C PROGRAM</b></p>
+
+<p>Example program ------&gt; <b>TRIVIAL.C </b></p>
+
+<p>The best way to get started with C is to actually study a program, so
+load the file named TRIVIAL.C and display it on the monitor. You are looking
+at the simplest possible C program. There is no way to simplify this program
+or to leave anything out. Unfortunately, the program doesn't do anything.
+</p>
+
+<p>The word <b>main </b>is very important, and must appear once, and only
+once in every C program. This is the point where execution is begun when
+the program is run. We will see later that this does not have to be the
+first statement in the program but it must exist as the entry point. Following
+the <b>main </b>program name is a pair of parentheses which are an indication
+to the compiler that this is a function. We will cover exactly what a function
+is in due time. For now, I suggest that you simply include the pair of
+parentheses. </p>
+
+<p>The two curly brackets in lines 2 and 3, properly called braces, are
+used to define the limits of the program itself. The actual program statements
+go between the two braces and in this case, there are no statements because
+the program does absolutely nothing. You can compile and run this program,
+but since it has no executable statements, it does nothing. Keep in mind,
+however, that it is a valid C program. When you compile this program, you
+may get a warning. You can ignore the warning and we will discuss it later
+in this tutorial, or you can modify the program so that it appears as follows;</p>
+
+<pre>    int main()
+    {
+       return 0;
+    }</pre>
+
+<p>This modified program must compile on any good C compiler since it conforms
+to the ANSI-C standard. We will explain the difference in these two programs
+later in this tutorial.</p>
+
+<p><b>A PROGRAM THAT DOES SOMETHING </b></p>
+
+<p>Example program ------&gt; <b>WRTSOME.C </b></p>
+
+<p>For a much more interesting program, load the program named WRTSOME.C
+and display it on your monitor. It is the same as the previous program
+except that it has one executable statement between the braces plus the
+obligatory <b>return </b>statement. </p>
+
+<p>The executable statement is a call to a function supplied as a part
+of your C library. Once again, we will not worry about what a function
+is, but only how to use this one named <b>printf()</b>. In order to output
+text to the monitor, the desired text is put within the function parentheses
+and bounded by quotation marks. The end result is that whatever text is
+included between the quotation marks will be displayed on the monitor when
+the program is run. </p>
+
+<p>Notice the semi-colon at the end of line 5. C uses a semi-colon as a
+statement terminator, so the semi-colon is required as a signal to the
+compiler that this line is complete. This program is also executable, so
+you can compile and run it to see if it does what you think it should.
+It should cause the text between the quotation marks to appear on the monitor
+when you execute it. </p>
+
+<p>You can ignore the statements in lines 1 and 7 in this program and similar
+statements in each of the remaining programs in this chapter. These will
+be fully described later in this tutorial. We will also define why the
+word <b>int </b>is used at the begining of line 3. We have a few preliminary
+topics to cover before we get to these items.</p>
+
+<p><b>ANOTHER PROGRAM WITH MORE OUTPUT </b></p>
+
+<p>Example program ------&gt; <b>WRTMORE.C </b></p>
+
+<p>Load the program WRTMORE.C and display it on your monitor for an example
+with more output and another small but important concept. You will see
+that there are four executable statements in this program, each one being
+a call to the function <b>printf().</b> The top line will be executed first,
+then the next, and so on, until the fourth line is complete. The statements
+are executed sequentially from top to bottom. </p>
+
+<p>Notice the funny character near the end of the first line, namely the
+backslash. The backslash is used in the <b>printf()</b> statement to indicate
+that a special control character is following. In this case, the &quot;<b>n</b>&quot;
+indicates that a newline is requested. This is an indication to return
+the cursor to the left side of the monitor and move down one line. Any
+place within printed text that you desire, you can put a newline character
+to start a new line. You could even put it in the middle of a word and
+split the word between two lines. </p>
+
+<p>A complete description of this program is now possible. The first <b>printf()</b>
+outputs a line of text and returns the carriage. (Of course, there is no
+carriage, but the cursor is moved to the next line on the monitor. The
+terminology carries over from the days of teletypes.) The second <b>printf()</b>
+outputs a line of text but does not return the carriage so that the third
+line is appended to the end of the second, then followed by two carriage
+returns, resulting in a blank line. Finally the fourth <b>printf()</b>
+outputs a line followed by a carriage return and the program is complete.
+</p>
+
+<p>After compiling and executing WRTMORE.C, the following text should be
+displayed on your monitor; </p>
+
+<pre>This is a line of text to output. 
+And this is another line of text.
+ 
+This is a third line. 
+</pre>
+
+<p>Compile and execute this program to see if it gives you this output.
+It would be a good idea at this time for you to experiment by adding additional
+lines of printout to see if you understand how the statements really work.
+Add a few carriage returns in the middle of a line to prove to yourself
+that it works as stated, then compile and execute the modified program.
+The more you modify and compile the example programs included with this
+tutorial, the more you will learn as you work your way through it. </p>
+
+<p><b>LET'S PRINT SOME NUMBERS </b></p>
+
+<p>Example program ------&gt; <b>ONEINT.C </b></p>
+
+<p>Load the file named ONEINT.C and display it on the monitor for our first
+example of how to work with data in a C program. The entry point <b>main()
+</b>should be clear to you by now as well as the beginning brace. The first
+new thing we encounter is line 5 containing <tt>int index;</tt> which is
+used to define an integer variable named <b>index</b>. The word <b>int
+</b>is a keyword in C, and can not be used for anything else. It defines
+a variable that can store a whole number within a predefined range of values.
+We will define an actual range later. The variable name, <b>index</b>,
+can be any name that follows the rules for an identifier and is not one
+of the keywords for C. The final character on the line, the semi-colon,
+is the statement terminator as discussed earlier. </p>
+
+<p>Note that, even though we have defined a variable, we have not yet assigned
+a value to it, so it contains an undefined value. We will see in a later
+chapter that additional integers could also be defined on the same line,
+but we will not complicate the present situation. </p>
+
+<p>Observing the main body of the program, you will notice that there are
+three statements that assign a value to the variable <b>index</b>, but
+only one at a time. The statement in line 7 assigns the value of 13 to
+<b>index</b>, and its value is printed out by line 8. (We will see how
+shortly. Trust me for the time being.) Later, the value of 27 is assigned
+to <b>index</b>, and finally 10 is assigned to it, each value being printed
+out. It should be intuitively clear that <b>index </b>is indeed a variable
+and can store many different values but only one value at a time of course.
+</p>
+
+<p>Please note that many times the words &quot;printed out&quot; are used
+to mean &quot;displayed on the monitor&quot;. You will find that in many
+cases experienced programmers take this liberty, probably due to the <b>printf()</b>
+function being used for monitor display. </p>
+
+<p><b>HOW DO WE PRINT NUMBERS? </b></p>
+
+<p>To keep our promise, let's return to the <b>printf()</b> statements
+for a definition of how they work. Notice that they are all identical and
+that they all begin just like the <b>printf()</b> statements we have seen
+before. The first difference occurs when we come to the % character. This
+is a special character that signals the output routine to stop copying
+characters to the output and do something different, usually to output
+the value of a variable. The <b>% </b>sign is used to signal the output
+of many different types of variables, but we will restrict ourselves to
+only one for this example. The character following the <b>% </b>sign is
+a <b>d</b>, which signals the output routine to get a decimal value and
+output it. Where the decimal value comes from will be covered shortly.
+After the <b>d</b>, we find the familiar <b>\n</b>, which is a signal to
+return the video &quot;carriage&quot;, and the closing quotation mark.
+</p>
+
+<p>All of the characters between the quotation marks define the pattern
+of data to be output by this statement. Following the output pattern, there
+is a comma followed by the variable name <b>index</b>. This is where the
+<b>printf()</b> statement gets the decimal value which it will output because
+of the <b>%d</b> we saw earlier. The system substitutes the current value
+of the variable named <b>index </b>for the <b>%d</b> and copies it to the
+monitor. We could add more <b>%d</b> output field descriptors anywhere
+within the brackets and more variables following the description to cause
+more data to be printed with one statement. Keep in mind however, that
+the number of field descriptors and the number of variable definitions
+must be the same or the runtime system will generate something we are not
+expecting. </p>
+
+<p>Much more will be covered at a later time on all aspects of input and
+output formatting. A reasonably good grasp of these fundamentals are necessary
+in order to understand the following lessons. It is not necessary to understand
+everything about output formatting at this time, only a fair understanding
+of the basics. </p>
+
+<p>Compile and run ONEINT.C and observe the output. Two programming exercises
+at the end of this chapter are based on this program. </p>
+
+<p><b>HOW DO WE ADD COMMENTS IN C? </b></p>
+
+<p>Example program ------&gt; <b>COMMENTS.C </b></p>
+
+<p>Load the file named COMMENTS.C and observe it on your monitor for an
+example of how comments can be added to a C program. Comments are added
+to make a program more readable to you but represent nonsense to the compiler,
+so we must tell the compiler to ignore the comments completely by bracketing
+them with special characters. The slash star combination is used in C for
+comment delimiters, and are illustrated in the program at hand. Please
+note that the program does not illustrate good commenting practice, but
+is intended to illustrate where comments can go in a program. It is a very
+sloppy looking program. </p>
+
+<p>The slash star combination in line 3 introduces the first comment and
+the star slash at the end of that line terminates this comment. Note that
+this comment is prior to the beginning of the program illustrating that
+a comment can precede the program itself. Good programming practice would
+include a comment prior to the program with a short introductory description
+of the program. The comment in line 5 is after the main program entry point
+and prior to the opening brace for the program code itself. </p>
+
+<p>The third comment starts after the first executable statement in line
+7 and continues for four lines. This is perfectly legal because a comment
+can continue for as many lines as desired until it is terminated. Note
+carefully that if anything were included in the blank spaces to the left
+of the three continuation lines of the comment, it would be part of the
+comment and would not be compiled, but totally ignored by the compiler.
+The last comment, in line 15, is located following the completion of the
+program, illustrating that comments can go nearly anywhere in a C program.
+</p>
+
+<p>Experiment with this program by adding comments in other places to see
+what will happen. Comment out one of the <b>printf()</b> statements by
+putting comment delimiters both before and after it and see that it does
+not get executed and therefore does not produce a line of printout. </p>
+
+<p>Comments are very important in any programming language because you
+will soon forget what you did and why you did it. It will be much easier
+to modify or fix a well commented program a year from now than one with
+few or no comments. You will very quickly develop your own personal style
+of commenting. </p>
+
+<p>Some C compilers will allow you to &quot;nest&quot; comments which can
+be very handy if you need to &quot;comment out&quot; a section of code
+during debugging. Since nested comments are not a part of the ANSI-C standard,
+none will be used in this tutorial. Check the documentation for your compiler
+to see if they are permitted with your implementation of C. Even though
+they may be allowed, it is a good idea to refrain from their use, since
+they are rarely used by experienced C programmers, and using them may make
+it difficult to port your code to another compiler if the need should arise.</p>
+
+<p><b>GOOD FORMATTING STYLE </b></p>
+
+<p>Example program ------&gt; <b>GOODFORM.C </b></p>
+
+<p>Load the file GOODFORM.C and observe it on your monitor. It is an example
+of a well formatted program. Even though it is very short and therefore
+does very little, it is very easy to see at a glance what it does. With
+the experience you have already gained in this tutorial, you should be
+able to very quickly grasp the meaning of the program in it's entirety.
+Your C compiler ignores all extra spaces and all carriage returns giving
+you considerable freedom in formatting your program. Indenting and adding
+spaces is entirely up to you and is a matter of personal taste. Compile
+and run the program to see if it does what you expect it to do. </p>
+
+<p>Example program ------&gt; <b>UGLYFORM.C </b></p>
+
+<p>Now load and display the program UGLYFORM.C and observe it. How long
+will it take you to figure out what this program will do? It doesn't matter
+to the compiler which format style you use, but it will matter to you when
+you try to debug your program. Compile this program and run it. You may
+be surprised to find that it is the same program as the last one, except
+for the formatting. Don't get too worried about formatting style yet. You
+will have plenty of time to develop a style of your own as you learn the
+C language. Be observant of styles as you see C programs in magazines and
+books. </p>
+
+<p>This covers some of the basic concepts of programming in C, but as there
+are many other things to learn, we will forge ahead to additional program
+structure. It will definitely be to your advantage to do the programming
+exercises at the end of each chapter. They are designed to augment your
+studies and teach you to use your compiler. </p>
+
+<p><b>PROGRAMMING EXERCISES </b></p>
+
+<ol>
+<li>Write a program to display your name on the monitor.</li>
+
+<li>Modify the program to display your address and phone number on separate
+lines by adding two additional <b>printf()</b> statements.</li>
+
+<li>Remove line 7 from ONEINT.C by commenting it out, then compile and
+execute the resulting program to see the value of an uninitialized variable.
+This can be any value within the allowable range for that variable. If
+it happens to have the value of zero, that is only a coincidence, but then
+zero is the most probable value to be in an uninitialized variable because
+there are lots of zero values floating around in a computer's memory. It
+is actually legal for the program to abort if you refer to a variable that
+you failed to initialize, but few compilers, if any, will actually do so.</li>
+
+<li>Add the following two lines just after the last <b>printf()</b> of
+ONEINT.C to see what it does. Study it long enough to completely understand
+the result. </li>
+</ol>
+
+<pre>printf(&quot;Index is %d\n it still is %d\n it is %d&quot;, </pre>
+
+<pre>                            index, index, index);</pre>
+
+<p><a href="clist.htm">Return to Table of Contents</a></p>
+
+<p><a href="chap03.htm">Advance to Chapter 3</a></p>
+
+<p>
+<hr width="100%" >
+<font size=-1><i>Copyright &copy; 1988-2001 Coronado Enterprises, a division of 
+WebStrata IS - Last update, March 27, 2001 <br>
+Gordon Dodrill - author - </i><a href="http://www.coronadoenterprises.com/coders/index.html">Please 
+post any comments, suggestions or code snippets to our Code Board</a>.</font> 
+<br>
+<p></p>
+
+<br><p></p>
+
+</body>
+</html>
